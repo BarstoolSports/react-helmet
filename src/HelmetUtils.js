@@ -448,7 +448,7 @@ const updateTags = (type, tags) => {
     }
 
     oldTags.forEach(tag => tag.parentNode.removeChild(tag));
-    newTags.forEach(tag => headElement.appendChild(tag));
+    newTags.forEach(tag => headElement.insertBefore(tag, headElement.firstChild));
 
     return {
         oldTags,
